@@ -7,11 +7,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { TopNavComponent } from "./topnav/topnav.component";
+import { FooterComponent } from "./footer/footer.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    TopNavComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
