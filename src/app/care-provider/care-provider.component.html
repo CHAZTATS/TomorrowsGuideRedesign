@@ -1,0 +1,32 @@
+<div class="row text-center">
+  <div class="pull-left">
+    <div class="col-md-12">
+      <a [routerLink]="['/home']">Oh no I'm a supplier!</a>
+    </div>
+  </div>
+  <h2>For Care Providers</h2>
+  <p>
+    Care Homes • Care Groups • Extra Care Housing
+    <br>
+    Adult Day Care Centres • Mental Health Hospitals
+    <br>
+    Authorities • Associations • Charities
+  </p>
+  <p>
+    <a href="https://www.carehome.co.uk/advertise.cfm/page/carehomeentry">Request Entry</a> •
+    <a href="https://www.carehome.co.uk/controlpanel/">Update Entry</a><br>
+    <a href="https://www.carehome.co.uk/advertise.cfm/page/carehomeoverview">Web Stats &amp; Testimonials</a>
+  </p>
+</div>
+<br/>
+<div class="row">
+  <div class="col-md-offset-2 col-md-2">
+    <care-provider-nav (selectedChanged)="onSelectedChanged($event)"></care-provider-nav>
+  </div>
+  <div class="col-md-6">
+    <care-provider-services *ngIf="title == 'services'"></care-provider-services>
+    <care-provider-features *ngIf="title == 'features'"></care-provider-features>
+    <care-provider-advertisement *ngIf="title == 'advertisement'"></care-provider-advertisement>
+    <care-provider-cv-search *ngIf="title == 'cvsearch'"></care-provider-cv-search>
+  </div>
+</div>

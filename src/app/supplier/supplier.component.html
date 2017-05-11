@@ -1,0 +1,32 @@
+<div class="row text-center">
+  <div class="pull-left">
+    <div class="col-md-12">
+      <a [routerLink]="['/home']">Oh no I'm a care provider!</a>
+    </div>
+  </div>
+  <h2>For Suppliers</h2>
+  <p class="text-center">Suppliers of Products &amp; Services to the Care Industry<br>
+		<em>(eg a Furniture Supplier, Training Company or Recruitment Agency)</em>
+  </p>
+  <p class="text-center">
+    <a href="https://www.carehome.co.uk/advertise_supplier.cfm/page/supplierentry">Request Entry</a> •
+    <a href="https://www.carehome.co.uk/controlpanel/">Update Entry</a><br>
+    <a href="https://www.carehome.co.uk/advertise_supplier.cfm/page/supplieroverview">Web Stats &amp; Testimonials</a>
+  </p>
+</div>
+<br/>
+<div class="row">
+  <div class="col-md-offset-2 col-md-2">
+    <supplier-nav (selectedChanged)="onSelectedChanged($event)"></supplier-nav>
+  </div>
+  <div class="col-md-6">
+    <supplier-services *ngIf="title == 'services'"></supplier-services>
+    <supplier-features *ngIf="title == 'features'"></supplier-features>
+    <supplier-advertisement *ngIf="title == 'advertisement'"></supplier-advertisement>
+    <supplier-cv-search *ngIf="title == 'cvsearch'"></supplier-cv-search>
+    <supplier-data *ngIf="title == 'data'"></supplier-data>
+    <supplier-property *ngIf="title == 'property'"></supplier-property>
+    <supplier-recruitment *ngIf="title == 'recruitment'"></supplier-recruitment>
+    <supplier-training *ngIf="title == 'training'"></supplier-training>
+  </div>
+</div>
